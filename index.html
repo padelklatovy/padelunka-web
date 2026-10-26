@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PADELUNKA – tři v týmu, dva na kurtu</title>
+<meta name="description" content="PADELUNKA je týmový padelový formát pro hobby hráče: tři v týmu, dva muži a jedna žena, dva na kurtu a hodina společné hry. Připravujeme Šumavskou padelovou ligu 2027.">
+<meta name="theme-color" content="#0d0c0c">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://padelunka.cz/">
+<meta property="og:url" content="https://padelunka.cz/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="PADELUNKA">
+<meta property="og:title" content="PADELUNKA – tři v týmu, dva na kurtu">
+<meta property="og:description" content="Nový týmový formát padelu pro hobby hráče. Dva muži + jedna žena, jedna hodina týmové hry. Připravujeme ligu 2027.">
+<meta property="og:image" content="https://padelunka.cz/assets/img/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PADELUNKA – 3 hráči, 1 tým, 1 hodina">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/nastaveni.js" defer></script>
+<script src="assets/js/web.js" defer></script>
+<script src="assets/js/rotace.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+
+<header class="top">
+  <div class="top__in">
+    <a class="brand" href="#uvod" aria-label="PADELUNKA – na začátek stránky">
+      <span class="brand__name">PADELUNKA</span><span class="brand__by">by PADELUN</span>
+    </a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#jak-se-hraje">Jak se hraje</a>
+      <a href="#ukazka">Ukázka</a>
+      <a href="#pravidla">Pravidla</a>
+      <a href="#kluby">Pro kluby</a>
+      <a class="nav__liga" href="#liga">Liga 2027</a>
+    </nav>
+  </div>
+</header>
+
+<main id="obsah">
+
+<!-- ============ ÚVOD ============ -->
+<section class="hero" id="uvod" aria-labelledby="hero-nazev">
+  <div class="wrap">
+    <h1 class="hero__mega" id="hero-nazev">PADELUNKA</h1>
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <p class="hero__claim">Tři v týmu. Dva na kurtu. <em>Každý game společný.</em></p>
+        <p class="hero__mix"><span>Dva muži + jedna žena.</span> <span>Jedna hodina týmové hry.</span></p>
+        <p class="hero__lead">Nový padelový formát pro hobby hráče. Střídáte se, fandíte si a sbíráte gamy pro svůj tým.</p>
+        <div class="hero__cta">
+          <a class="btn btn--red" href="#jak-se-hraje">Jak se hraje</a>
+          <a class="btn btn--line" href="#liga">Liga 2027</a>
+        </div>
+      </div>
+
+      <figure class="hero__media" id="hero-media">
+        <!-- Bez dodané fotky se zobrazí živé schéma trojice. Fotka se zapne v assets/js/nastaveni.js -->
+        <div class="trio" aria-hidden="true">
+          <svg viewBox="0 0 420 400" class="trio__svg">
+            <g class="trio__court">
+              <rect x="30" y="30" width="360" height="340"/>
+              <line x1="30" y1="130" x2="390" y2="130"/>
+              <line x1="210" y1="130" x2="210" y2="370"/>
+              <line x1="30" y1="30" x2="390" y2="30" class="trio__net"/>
+            </g>
+            <g class="trio__edges">
+              <line data-e="AB" x1="110" y1="290" x2="310" y2="290"/>
+              <line data-e="BC" x1="310" y1="290" x2="210" y2="115"/>
+              <line data-e="CA" x1="210" y1="115" x2="110" y2="290"/>
+            </g>
+            <circle class="trio__ball" r="9" cx="210" cy="290"/>
+            <g class="trio__node" data-p="A" transform="translate(110 290)"><circle r="34"/><text dy="0.36em">A</text></g>
+            <g class="trio__node" data-p="B" transform="translate(310 290)"><circle r="34"/><text dy="0.36em">B</text></g>
+            <g class="trio__node" data-p="C" transform="translate(210 115)"><circle r="34"/><text dy="0.36em">C</text></g>
+          </svg>
+        </div>
+        <figcaption class="trio__cap" aria-live="off"><span class="mono">Na kurtu</span> <b id="trio-pair">A + B</b> <span class="mono">· fandí</span> <b id="trio-rest">C</b></figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__run">
+      <span>3 hráči</span><i></i><span>1 tým</span><i></i><span>1 hodina</span><i></i><span>2 muži + 1 žena</span><i></i>
+      <span>3 hráči</span><i></i><span>1 tým</span><i></i><span>1 hodina</span><i></i><span>2 muži + 1 žena</span><i></i>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JAK SE HRAJE ============ -->
+<section class="band band--paper" id="jak-se-hraje" aria-labelledby="jak-nazev">
+  <div class="wrap">
+    <p class="eyebrow">Princip na jednu minutu</p>
+    <h2 class="h2" id="jak-nazev">Jak se hraje</h2>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="step__n">1</span>
+        <svg class="step__pic" viewBox="0 0 120 60" aria-hidden="true"><circle cx="24" cy="30" r="16" class="pA"/><circle cx="60" cy="30" r="16" class="pB"/><circle cx="96" cy="30" r="16" class="pC"/></svg>
+        <h3>Sestavíte trojici</h3>
+        <p>Dva muži a jedna žena. Kapitán před zápasem určí, kdo je A, B a C.</p>
+      </li>
+      <li class="step">
+        <span class="step__n">2</span>
+        <svg class="step__pic" viewBox="0 0 120 60" aria-hidden="true"><rect x="2" y="6" width="78" height="48" class="court"/><circle cx="22" cy="34" r="12" class="pA"/><circle cx="60" cy="34" r="12" class="pB"/><circle cx="104" cy="34" r="12" class="pC"/></svg>
+        <h3>Dva hrají, třetí fandí</h3>
+        <p>Na kurtu je vždy dvojice z týmu. Třetí si odpočine na lavičce a podporuje spoluhráče.</p>
+      </li>
+      <li class="step">
+        <span class="step__n">3</span>
+        <svg class="step__pic" viewBox="0 0 120 60" aria-hidden="true"><rect x="2" y="6" width="78" height="48" class="court"/><circle cx="60" cy="34" r="12" class="pB"/><circle cx="22" cy="34" r="12" class="pC"/><circle cx="104" cy="34" r="12" class="pA"/><path d="M92 20 C 70 2, 40 2, 26 18" class="swap"/></svg>
+        <h3>Po lichém gamu se střídáte</h3>
+        <p>Při každé změně stran, tedy po 1., 3., 5. gamu a dál. Oba týmy střídají naráz.</p>
+      </li>
+      <li class="step">
+        <span class="step__n">4</span>
+        <svg class="step__pic" viewBox="0 0 120 60" aria-hidden="true"><circle cx="30" cy="30" r="12" class="pA"/><circle cx="60" cy="30" r="12" class="pB"/><circle cx="90" cy="30" r="12" class="pC"/><rect x="10" y="4" width="100" height="52" rx="26" class="team"/></svg>
+        <h3>Každý game patří týmu</h3>
+        <p>Nehrají se sety. Počítají se gamy celého týmu a po hodině vyhrává tým, který jich má víc.</p>
+      </li>
+    </ol>
+
+    <div class="rot" role="img" aria-label="Pořadí dvojic: A a B, potom B a C, potom C a A, a znovu A a B">
+      <span class="rot__pair"><b class="cA">A</b><b class="cB">B</b></span><i class="arr"></i>
+      <span class="rot__pair"><b class="cB">B</b><b class="cC">C</b></span><i class="arr"></i>
+      <span class="rot__pair"><b class="cC">C</b><b class="cA">A</b></span><i class="arr"></i>
+      <span class="rot__pair"><b class="cA">A</b><b class="cB">B</b></span>
+    </div>
+    <p class="rot__note">Každý hraje s oběma spoluhráči. Ze tří dvojic je jedna mužská a dvě smíšené, takže to není klasický mix, kde je na kurtu pořád muž a žena.</p>
+  </div>
+</section>
+
+<!-- ============ INTERAKTIVNÍ UKÁZKA ============ -->
+<section class="band band--ink demo" id="ukazka" aria-labelledby="demo-nazev">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--y">Interaktivní ukázka</p>
+    <h2 class="h2" id="demo-nazev">Kdo jde ven, kdo jde dovnitř</h2>
+    <p class="demo__intro">Jeden tým, jedna polovina kurtu, pohled shora. Síť je nahoře, základní čára dole. Pusťte si ukázku, nebo jděte krok po kroku.</p>
+
+    <div class="demo__grid">
+        <div class="seg demo__seg" role="radiogroup" aria-label="Jak tým začíná">
+          <button type="button" role="radio" aria-checked="true" data-start="podani" id="start-podani">Tým začíná podáním</button>
+          <button type="button" role="radio" aria-checked="false" data-start="prijem" id="start-prijem">Tým začíná příjmem</button>
+        </div>
+      <div class="demo__stage">
+        <svg class="court" id="court" viewBox="-14 -46 584 500" role="img" aria-labelledby="court-title court-desc">
+          <title id="court-title">Polovina padelového kurtu s hráči A, B a C</title>
+          <desc id="court-desc">Schéma ukazuje, kdo stojí na příjmu vpravo, kdo vlevo, kdo sedí na lavičce a kdo bude podávat. Slovní popis každého kroku je v textu u schématu.</desc>
+          <defs>
+            <pattern id="mesh" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 0L8 8M8 0L0 8" class="mesh"/></pattern>
+          </defs>
+          <!-- kurt 10 × 10 m, 1 m = 40 jednotek -->
+          <rect x="0" y="0" width="400" height="400" class="c-floor"/>
+          <rect x="0" y="0" width="400" height="400" class="c-wall"/>
+          <rect x="0" y="-9" width="400" height="18" fill="url(#mesh)" class="c-netbg"/>
+          <line x1="-8" y1="0" x2="408" y2="0" class="c-net"/>
+          <line x1="0" y1="278" x2="400" y2="278" class="c-line"/>
+          <line x1="200" y1="0" x2="200" y2="286" class="c-line"/>
+          <rect x="0" y="278" width="200" height="122" class="c-zone" id="zone-L"/>
+          <rect x="200" y="278" width="200" height="122" class="c-zone" id="zone-R"/>
+          <text x="200" y="-20" class="c-lab" text-anchor="middle">SÍŤ</text>
+          <text x="200" y="430" class="c-lab" text-anchor="middle">ZÁKLADNÍ ČÁRA</text>
+          <text x="100" y="392" class="c-side" text-anchor="middle">PŘÍJEM VLEVO</text>
+          <text x="300" y="392" class="c-side" text-anchor="middle">PŘÍJEM VPRAVO</text>
+          <!-- lavička -->
+          <g class="bench">
+            <rect x="440" y="136" width="106" height="178" rx="10" class="b-box"/>
+            <text x="493" y="124" text-anchor="middle" class="c-lab">LAVIČKA</text>
+          </g>
+          <!-- míček = kdo podává -->
+          <g id="ball" class="ball" style="transform: translate(300px, 300px)"><circle r="11"/><path d="M-7 -8 Q 0 0 -7 8 M7 -8 Q 0 0 7 8" class="ball__seam"/></g>
+          <!-- hráči -->
+          <g class="pl" id="pl-A" data-p="A"><circle class="pl__ring" r="45"/><circle class="pl__dot" r="35"/><text dy="0.36em">A</text></g>
+          <g class="pl" id="pl-B" data-p="B"><circle class="pl__ring" r="45"/><circle class="pl__dot" r="35"/><text dy="0.36em">B</text></g>
+          <g class="pl" id="pl-C" data-p="C"><circle class="pl__ring" r="45"/><circle class="pl__dot" r="35"/><text dy="0.36em">C</text></g>
+        </svg>
+
+      </div>
+
+      <div class="demo__panel">
+
+
+        <div class="narr">
+          <p class="narr__step mono" id="narr-step">Krok 1 z 32</p>
+          <p class="narr__title" id="narr-title">1. game: podává váš tým</p>
+          <p class="narr__text" id="narr-text" aria-live="polite">Úvodní dvojice A a B. <b>A</b> přijímá vpravo, <b>B</b> vlevo. Pořadí podání si určili A, potom B, takže první game podává <b>A</b>. C fandí na lavičce.</p>
+        </div>
+
+        <dl class="status">
+          <div><dt>Příjem vlevo</dt><dd id="st-L">B</dd></div>
+          <div><dt>Příjem vpravo</dt><dd id="st-R">A</dd></div>
+          <div><dt>Lavička</dt><dd id="st-B">C</dd></div>
+          <div class="status__srv"><dt id="st-srv-lab">Podání týmu · 1. game</dt><dd id="st-srv">A</dd></div>
+        </dl>
+
+        <div class="ctrl" role="group" aria-label="Ovládání ukázky">
+          <button type="button" class="btn btn--red ctrl__play" id="btn-play" aria-pressed="false">Přehrát</button>
+          <button type="button" class="btn btn--line" id="btn-next">Další krok</button>
+          <button type="button" class="btn btn--ghost" id="btn-reset">Od začátku</button>
+        </div>
+      </div>
+        <p class="demo__legend"><span class="ball-ico" aria-hidden="true"></span><span>Míček ukazuje, <b>kdo</b> podává, ne místo podání. Podávající během gamu podává střídavě zprava a zleva.</span></p>
+    </div>
+
+    <div class="tl" id="timeline" role="group" aria-label="Přehled prvních 13 gamů – kliknutím přeskočíte"></div>
+
+    <blockquote class="rule">
+      <p>Kdo přichází, přebírá místo toho, kdo odchází — na příjmu i v pořadí podání. Hráč, který zůstává, svou stranu příjmu nemění.</p>
+      <p class="rule__add">Díky rotaci se každý postupně vystřídá vpravo i vlevo.</p>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ PROČ ============ -->
+<section class="band band--paper why" aria-labelledby="proc-nazev">
+  <div class="wrap">
+    <p class="eyebrow">Proč PADELUNKA</p>
+    <h2 class="h2" id="proc-nazev">Hraje se za tým, ne jen za sebe</h2>
+    <ul class="why__list">
+      <li><b>Hraješ s oběma spoluhráči.</b> <span>Dvojice se točí, takže se během hodiny potkáš na kurtu s každým z týmu.</span></li>
+      <li><b>Na výsledku se podílí celý tým.</b> <span>Každý získaný game se připisuje týmu, ať ho vyhrála kterákoli dvojice.</span></li>
+      <li><b>Mezi střídáními si odpočineš a fandíš.</b> <span>Chvíle na lavičce patří vydechnutí a podpoře spoluhráčů.</span></li>
+      <li><b>Ženy a muži v jedné týmové soutěži.</b> <span>Každá trojice skládá dohromady dva muže a jednu ženu.</span></li>
+      <li><b>Pro hobby hráče, kteří si chtějí zasoutěžit.</b> <span>A pak spolu zůstat a užít si společné odpoledne.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PILOT ============ -->
+<section class="band band--ink pilot" id="pilot" aria-labelledby="pilot-nazev">
+  <div class="wrap">
+    <div class="pilot__head">
+      <p class="pilot__date mono">24. října 2026 · Padel Klatovy</p>
+      <h2 class="h2" id="pilot-nazev">Začalo to v Klatovech.</h2>
+    </div>
+    <div class="pilot__body">
+      <p class="pilot__text">Na podzim jsme PADELUNKU poprvé vyzkoušeli naostro. První pilot proběhl 24.&nbsp;října 2026 v&nbsp;Padel Klatovy. Reakce hráčů byly pozitivní, a tak formát dál ladíme a připravujeme z něj ligu.</p>
+      <p class="pilot__big" aria-hidden="true"><span>24</span><span>10</span><span>26</span></p>
+    </div>
+    <!-- Fotky z pilotu se zobrazí automaticky po vyplnění fotkyPilot v assets/js/nastaveni.js -->
+    <div class="gallery" id="gallery" hidden></div>
+  </div>
+</section>
+
+<!-- ============ LIGA 2027 ============ -->
+<section class="band band--red liga" id="liga" aria-labelledby="liga-nazev">
+  <div class="wrap">
+    <p class="liga__badge mono">Připravujeme · 2027</p>
+    <h2 class="liga__h" id="liga-nazev">Postav trojici. V roce 2027 jdeme do ligy.</h2>
+    <p class="liga__lead">Připravujeme první ročník Šumavské padelové ligy ve formátu PADELUNKA. Dva muži a jedna žena v každé nastupující trojici.</p>
+    <p class="liga__note">Termíny, ceny a přihlášky zatím nejsou stanovené. Zveřejníme je tady, jakmile budou hotové. Už teď ale můžete dát vědět, že máte zájem.</p>
+
+    <div class="interest">
+      <div class="interest__item">
+        <h3>Hráči a týmy</h3>
+        <p>Máte trojici, nebo ji teprve skládáte? Napište nám a ozveme se, až otevřeme přihlášky.</p>
+        <div class="contact" data-predmet="Zájem o ligu PADELUNKA 2027 – hráči / tým" data-text="Dobrý den,%0A%0Amáme zájem o Šumavskou padelovou ligu ve formátu PADELUNKA.%0A%0ANázev týmu (pokud už ho máte):%0AJména hráčů:%0AMěsto / klub:%0A"></div>
+      </div>
+      <div class="interest__item">
+        <h3>Kluby</h3>
+        <p>Chcete u sebe uspořádat PADELUNKU nebo hostit ligová utkání? Domluvíme se na podrobnostech.</p>
+        <div class="contact" data-predmet="PADELUNKA v našem klubu" data-text="Dobrý den,%0A%0Ajako klub máme zájem uspořádat PADELUNKU.%0A%0ANázev klubu:%0AMěsto:%0APočet kurtů:%0AKontaktní osoba:%0A"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRAVIDLA A VIDEO ============ -->
+<section class="band band--paper rules" id="pravidla" aria-labelledby="pravidla-nazev">
+  <div class="wrap">
+    <p class="eyebrow">Pravidla v kostce</p>
+    <h2 class="h2" id="pravidla-nazev">Co platí na kurtu</h2>
+
+    <div class="rules__grid">
+      <dl class="rules__list">
+        <div><dt>Tým</dt><dd>3 hráči: dva muži a jedna žena. Na kurtu jsou vždy dva.</dd></div>
+        <div><dt>Délka</dt><dd>Hraje se hodinu. Po skončení času se dohraje rozehraný game.</dd></div>
+        <div><dt>Počítání</dt><dd>Žádné sety, průběžné skóre gamů, například 9 : 7. Při 40 : 40 golden point.</dd></div>
+        <div><dt>Střídání</dt><dd>Při změně stran, tedy po každém lichém gamu. Oba týmy střídají současně.</dd></div>
+        <div><dt>Dvojice</dt><dd>AB, potom BC, potom CA a znovu AB. Kdo je A, B a C, určí kapitán před utkáním.</dd></div>
+        <div><dt>Příjem</dt><dd>Úvodní dvojice si určí pravou a levou stranu příjmu. Příchozí hráč přebírá stranu toho, kdo odešel. Zůstávající svou stranu nemění. Strana se počítá z pohledu hráčů k síti.</dd></div>
+        <div><dt>Podání</dt><dd>Úvodní dvojice si určí pořadí podání. Příchozí hráč přebírá místo odcházejícího v pořadí. Pořadí se nepřerušuje ani neurčuje znovu.</dd></div>
+        <div><dt>Výsledek</dt><dd>Vyhrává tým s více gamy. Remíza je platný výsledek.</dd></div>
+      </dl>
+
+      <aside class="rules__side">
+        <p class="rules__fip">Střídání trojic a podání a příjem při střídání jsou vlastní pravidla PADELUNKY. Vše ostatní se řídí pravidly padelu (FIP).</p>
+        <div id="rules-download"></div>
+        <div id="video-slot"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PŮVOD A KLUBY ============ -->
+<section class="band band--ink origin" id="kluby" aria-labelledby="kluby-nazev">
+  <div class="wrap">
+    <p class="origin__by"><span>PADELUNKA</span> <span class="origin__by2">by PADELUN</span></p>
+    <p class="origin__pilot mono">První pilot: Padel Klatovy, 24. října 2026.</p>
+    <div class="origin__grid">
+      <h2 class="h3" id="kluby-nazev">Chcete hrát PADELUNKU u sebe?</h2>
+      <div class="origin__text">
+        <p>PADELUNKU chceme bezplatně rozšiřovat mezi hráče a kluby. Stačí trojice, kurt a hodina času.</p>
+        <p>Pokud ji chcete pořádat oficiálně pod názvem PADELUNKA, ozvěte se. Pošleme aktuální materiály a domluvíme, jak značku používat.</p>
+        <div class="contact" data-predmet="Oficiální zapojení klubu do PADELUNKY" data-text="Dobrý den,%0A%0Ajako klub bychom rádi pořádali PADELUNKU oficiálně.%0A%0ANázev klubu:%0AMěsto:%0AKontaktní osoba:%0A"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p class="foot__brand">PADELUNKA <span>by PADELUN</span></p>
+    <p>Domov prvního pilotu: Padel Klatovy</p>
+    <p>Web nepoužívá sledovací ani marketingové cookies.</p>
+    <p>© 2026 PADELUN</p>
+  </div>
+</footer>
+</body>
+</html>
