@@ -6,10 +6,10 @@
    ========================================================= */
 window.PADELUNKA = {
 
-  /* 1) KONTAKT – jediný údaj, který je k doplnění.
-        Příklad: "info@padelunka.cz"
-        Dokud je prázdný, web místo tlačítek napíše, že kontakt brzy doplníme. */
-  kontaktEmail: "",
+  /* 1) KONTAKT – zobrazí se v sekcích Liga 2027 a Pro kluby a v patičce.
+        Telefon pište ve tvaru +420 602 431 363 (mezery se pro volání odstraní samy). */
+  kontaktEmail: "info@padelun.cz",
+  kontaktTelefon: "+420 602 431 363",
 
   /* 2) ÚVODNÍ FOTKA z pilotu (výrazný výřez s lidmi).
         Soubory dejte do složky foto/ (návod v foto/README.md).

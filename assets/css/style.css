@@ -276,6 +276,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .interest p { max-width: 40ch; }
 
 .contact { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; margin-top: 6px; }
+.contact__btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.contact__tel { font-family: var(--mono); font-size: .9rem; text-decoration: none; }
+.contact__tel:hover { text-decoration: underline; }
 .contact__row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 .contact__mail { font-family: var(--mono); font-size: .9rem; user-select: all; word-break: break-all; }
 .contact__copy { background: transparent; border: 1px solid currentColor; color: inherit; border-radius: 999px; padding: 6px 12px; cursor: pointer; font-size: .85rem; font-weight: 600; }
@@ -305,6 +308,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .foot { background: #070606; color: var(--mute-d); padding-block: 36px calc(36px + env(safe-area-inset-bottom, 0px)); font-size: .92rem; }
 .foot__in { display: flex; flex-wrap: wrap; gap: 10px 32px; align-items: baseline; }
 .foot__brand { color: var(--paper); font-weight: 900; font-stretch: 70%; font-size: 1.3rem; margin-right: auto; }
+.foot a { color: var(--paper); text-decoration: none; }
+.foot a:hover { text-decoration: underline; }
 .foot__brand span { font-family: var(--mono); font-size: .7rem; font-weight: 500; color: var(--mute-d); text-transform: uppercase; }
 
 /* ---------- mobil ---------- */

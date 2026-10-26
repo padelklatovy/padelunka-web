@@ -75,24 +75,36 @@
   }
 
   /* ---------- kontakty ---------- */
-  var mail = (cfg.kontaktEmail || "").trim();
+  var mail = (cfg.kontaktEmail || "").trim(), tel = (cfg.kontaktTelefon || "").trim();
+  var telHref = "tel:" + tel.replace(/[^\d+]/g, "");
   document.querySelectorAll(".contact").forEach(function (c) {
-    if (!mail) {
+    if (!mail && !tel) {
       c.innerHTML = '<p class="contact__todo">Kontakt doplníme v nejbližších dnech</p>';
       return;
     }
-    var href = "mailto:" + mail + "?subject=" + encodeURIComponent(c.dataset.predmet || "PADELUNKA") + "&body=" + encodeURIComponent((c.dataset.text || "").replace(/%0A/g, "\n"));
-    var onRed = !!c.closest(".band--red");
-    c.innerHTML = '<a class="btn ' + (onRed ? "btn--ink" : "btn--red") + '" href="' + esc(href) + '">Napsat e-mail</a>' +
-      '<div class="contact__row"><span class="contact__mail">' + esc(mail) + '</span><button type="button" class="contact__copy">Kopírovat adresu</button></div>';
+    var onRed = !!c.closest(".band--red"), html = '<div class="contact__btns">';
+    if (mail) {
+      var href = "mailto:" + mail + "?subject=" + encodeURIComponent(c.dataset.predmet || "PADELUNKA") + "&body=" + encodeURIComponent((c.dataset.text || "").replace(/%0A/g, "\n"));
+      html += '<a class="btn ' + (onRed ? "btn--ink" : "btn--red") + '" href="' + esc(href) + '">Napsat e-mail</a>';
+    }
+    if (tel) html += '<a class="btn btn--line" href="' + esc(telHref) + '">Zavolat</a>';
+    html += "</div>";
+    if (mail) html += '<div class="contact__row"><span class="contact__mail">' + esc(mail) + '</span><button type="button" class="contact__copy">Kopírovat e-mail</button></div>';
+    if (tel) html += '<div class="contact__row"><a class="contact__tel" href="' + esc(telHref) + '">' + esc(tel) + "</a></div>";
+    c.innerHTML = html;
     var b = c.querySelector(".contact__copy");
-    b.addEventListener("click", function () {
-      var done = function () { b.textContent = "Zkopírováno"; setTimeout(function () { b.textContent = "Kopírovat adresu"; }, 2000); };
+    if (b) b.addEventListener("click", function () {
+      var done = function () { b.textContent = "Zkopírováno"; setTimeout(function () { b.textContent = "Kopírovat e-mail"; }, 2000); };
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(mail).then(done, function () { selectText(c.querySelector(".contact__mail")); });
       } else selectText(c.querySelector(".contact__mail"));
     });
   });
+  var fc = document.getElementById("foot-contact");
+  if (fc && (mail || tel)) {
+    fc.innerHTML = (mail ? '<a href="mailto:' + esc(mail) + '">' + esc(mail) + "</a>" : "") + (mail && tel ? " · " : "") + (tel ? '<a href="' + esc(telHref) + '">' + esc(tel) + "</a>" : "");
+    fc.hidden = false;
+  }
   function selectText(n) { var r = document.createRange(); r.selectNodeContents(n); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
 
   /* ---------- pravidla ke stažení ---------- */
