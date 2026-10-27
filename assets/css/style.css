@@ -58,7 +58,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .top__in { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 60px; max-width: calc(var(--max) + 2 * var(--gut)); margin-inline: auto;
   padding-left: max(var(--gut), env(safe-area-inset-left, 0px)); padding-right: max(var(--gut), env(safe-area-inset-right, 0px)); }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; white-space: nowrap; }
-.brand__mark { width: 38px; height: auto; flex: none; }
+.brand__mark { flex: none; display: grid; place-items: center; width: 44px; height: 44px; background: #fff; border-radius: 10px; }
+.brand__mark img { width: 34px; height: auto; }
+.brand__mark--s { width: 36px; height: 36px; border-radius: 8px; }
+.brand__mark--s img { width: 28px; }
 .brand__name { font-weight: 900; font-stretch: 70%; font-size: 1.45rem; letter-spacing: .01em; }
 .brand__by { font-family: var(--mono); font-size: .68rem; color: var(--mute-d); text-transform: uppercase; letter-spacing: .06em; }
 .nav { display: flex; align-items: center; gap: clamp(12px, 2.2vw, 28px); font-weight: 600; font-size: .95rem; }
