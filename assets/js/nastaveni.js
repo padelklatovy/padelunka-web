@@ -14,20 +14,28 @@ window.PADELUNKA = {
   /* 2) ÚVODNÍ FOTKA z pilotu (výrazný výřez s lidmi).
         Soubory dejte do složky foto/ (návod v foto/README.md).
         ohnisko = kam má ořez mířit, např. "50% 30%" (vodorovně, svisle). */
-  uvodniFoto: null,
-  /* Příklad:
   uvodniFoto: {
-    src: "foto/pilot-hra-1600.jpg",
-    srcMale: "foto/pilot-hra-900.jpg",
-    popis: "Hráči PADELUNKY při prvním pilotu v Padel Klatovy",
-    ohnisko: "50% 35%"
+    src: "foto/hra-detail-1600.jpg",
+    srcMale: "foto/hra-detail-900.jpg",
+    popis: "Hráč a hráčka PADELUNKY připravení na příjem při prvním pilotu v Padel Klatovy",
+    ohnisko: "50% 40%"
   },
-  */
 
-  /* 3) FOTKY Z PILOTU – nejlépe 4: společná, hra, zázemí, posezení. */
+  /* 3) FOTKY Z PILOTU – zobrazí se v sekci „Začalo to v Klatovech“ v tomto pořadí.
+        popisek = krátký štítek na fotce, popis = text pro nevidomé a vyhledávače. */
   fotkyPilot: [
-    /* { src: "foto/spolecna-1600.jpg", srcMale: "foto/spolecna-900.jpg",
-         popis: "Společná fotka účastníků pilotu", popisek: "Společná fotka", ohnisko: "50% 40%" }, */
+    { src: "foto/spolecna-fotka-1600.jpg", srcMale: "foto/spolecna-fotka-900.jpg",
+      popis: "Společná fotka hráčů prvního pilotu PADELUNKY na kurtu v Padel Klatovy", popisek: "Společná fotka", ohnisko: "50% 55%" },
+    { src: "foto/lavicka-fandeni-1600.jpg", srcMale: "foto/lavicka-fandeni-900.jpg",
+      popis: "Hráči na lavičce u kurtu sledují a fandí spoluhráčům", popisek: "Třetí fandí", ohnisko: "50% 38%" },
+    { src: "foto/hra-dvojice-1-1600.jpg", srcMale: "foto/hra-dvojice-1-900.jpg",
+      popis: "Smíšená dvojice ve hře na kurtu Padel Klatovy", popisek: "Hra", ohnisko: "50% 50%" },
+    { src: "foto/posezeni-smich-1600.jpg", srcMale: "foto/posezeni-smich-900.jpg",
+      popis: "Hráči po hraní u stolu v zázemí klubu", popisek: "Posezení po hraní", ohnisko: "50% 30%" },
+    { src: "foto/dve-trojice-u-site-1-1600.jpg", srcMale: "foto/dve-trojice-u-site-1-900.jpg",
+      popis: "Dvě trojice, každá dva muži a jedna žena, u sítě před zápasem", popisek: "Trojice proti trojici", ohnisko: "50% 64%" },
+    { src: "foto/hra-dvojice-2-1600.jpg", srcMale: "foto/hra-dvojice-2-900.jpg",
+      popis: "Hráč a hráčka čekají na podání soupeře", popisek: "Na příjmu", ohnisko: "50% 50%" }
   ],
 
   /* 4) PRAVIDLA ke stažení (PDF). Verzi opište přesně z dokumentu. */
