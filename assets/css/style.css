@@ -17,9 +17,10 @@
   --ink-2: #181616;
   --paper: #f4f1ec;      /* bílá s nádechem kurtového písku */
   --white: #ffffff;
-  --red: #fa261b;        /* červená Padel Klatovy */
-  --red-deep: #d91a10;
-  --green: #0b524e;      /* zelená Padel Klatovy */
+  /* oficiální barvy značky (RGB z manuálu) */
+  --red: #ff0000;        /* 255/0/0 */
+  --green: #024442;      /* 2/68/66 */
+  --grey: #898989;       /* 137/137/137 */
   --ball: #e2f53a;       /* žlutá jen pro míček */
   --mute-d: #a29b96;     /* šedá na tmavém */
   --mute-l: #5d5651;     /* šedá na světlém */
@@ -78,7 +79,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .btn:hover { transform: translateY(-2px); }
 .btn:active { transform: translateY(0); }
 .btn--red { background: var(--red); color: var(--white); }
-.btn--red:hover { background: var(--red-deep); }
+.btn--red:hover { background: var(--red); box-shadow: 0 6px 18px rgba(255,0,0,.35); }
 .btn--line { border-color: currentColor; color: inherit; background: transparent; }
 .btn--ghost { background: transparent; color: inherit; border-color: transparent; text-decoration: underline; text-underline-offset: 4px; padding-inline: 12px; }
 .btn--ink { background: var(--ink); color: var(--paper); }
@@ -86,7 +87,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* ---------- úvod ---------- */
 .hero { position: relative; padding-top: clamp(20px, 3vw, 40px); background:
-  radial-gradient(ellipse 60% 50% at 85% 60%, rgba(250,38,27,.16), transparent 70%), var(--ink); }
+  radial-gradient(ellipse 60% 50% at 85% 60%, rgba(255,0,0,.16), transparent 70%), var(--ink); }
 .hero__mega { font-weight: 900; font-stretch: 62%; line-height: .8; letter-spacing: -.012em; text-transform: uppercase;
   font-size: clamp(3rem, calc((min(100vw, calc(var(--max) + 2 * var(--gut))) - 2 * var(--gut)) * .244), 21rem);
   color: var(--paper); white-space: nowrap; margin-left: -.03em; }
