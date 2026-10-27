@@ -26,7 +26,7 @@
   --line-d: rgba(255,255,255,.16);
   --line-l: rgba(13,12,12,.16);
   /* hráči */
-  --pA: #fa261b; --pB: #3f7cff; --pC: #9b5cff;
+  --pA: var(--red); --pB: #3f7cff; --pC: var(--green);
   /* písmo */
   --f: "Archivo PL", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   --mono: "Mono PL", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -106,7 +106,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .trio__court .trio__net { stroke: rgba(255,255,255,.55); stroke-width: 5; stroke-dasharray: 2 6; }
 .trio__edges line { stroke: rgba(255,255,255,.14); stroke-width: 4; stroke-linecap: round; transition: stroke .6s, stroke-width .6s; }
 .trio__edges line.on { stroke: var(--paper); stroke-width: 8; }
-.trio__node circle { stroke: var(--ink); stroke-width: 6; transition: opacity .6s, transform .6s var(--ease); }
+.trio__node circle { stroke: var(--paper); stroke-width: 4; transition: opacity .6s, transform .6s var(--ease); }
 .trio__node text { fill: var(--white); font-weight: 900; font-stretch: 75%; font-size: 36px; text-anchor: middle; font-family: var(--f); }
 .trio__node[data-p="A"] circle { fill: var(--pA); }
 .trio__node[data-p="B"] circle { fill: var(--pB); }
@@ -169,7 +169,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .demo__stage { grid-area: stage; } .demo__seg { grid-area: seg; } .demo__panel { grid-area: panel; } .demo__legend { grid-area: legend; }
 .demo__stage { min-width: 0; }
 .court { width: 100%; height: auto; display: block; overflow: visible; }
-.c-floor { fill: var(--green); }
+.c-floor { fill: #1b2733; }
 .c-wall { fill: none; stroke: rgba(255,255,255,.55); stroke-width: 3; }
 .c-line { stroke: rgba(255,255,255,.85); stroke-width: 3; }
 .c-net { stroke: var(--paper); stroke-width: 5; }
@@ -181,7 +181,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .c-side { fill: rgba(255,255,255,.5); font-family: var(--mono); font-size: 12px; letter-spacing: .06em; }
 .b-box { fill: var(--ink-2); stroke: rgba(255,255,255,.35); stroke-width: 2; stroke-dasharray: 6 6; }
 .pl { transition: transform 1.25s var(--ease), opacity .5s; }
-.pl__dot { stroke: var(--ink); stroke-width: 4; }
+.pl__dot { stroke: var(--paper); stroke-width: 3; }
 .pl[data-p="A"] .pl__dot { fill: var(--pA); }
 .pl[data-p="B"] .pl__dot { fill: var(--pB); }
 .pl[data-p="C"] .pl__dot { fill: var(--pC); }
@@ -219,7 +219,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .status dd { font-weight: 900; font-stretch: 75%; font-size: 1.6rem; line-height: 1; }
 .status .status__srv { grid-column: 1 / -1; }
 .status .status__srv dd { color: var(--ball); }
-.status dd[data-p="A"] { color: var(--pA); } .status dd[data-p="B"] { color: var(--pB); } .status dd[data-p="C"] { color: var(--pC); }
+.status dd[data-p] { display: inline-grid; place-items: center; width: 1.45em; height: 1.45em; border-radius: 50%; color: var(--white); font-size: 1.25rem; box-shadow: 0 0 0 2px var(--paper); }
+.status dd[data-p="A"] { background: var(--pA); } .status dd[data-p="B"] { background: var(--pB); } .status dd[data-p="C"] { background: var(--pC); }
 .ctrl { display: flex; flex-wrap: wrap; gap: 10px; }
 .ctrl .btn { min-height: 48px; padding-inline: 20px; }
 .ctrl__play { min-width: 128px; }
@@ -230,7 +231,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .tl button.now { border-color: var(--ball); }
 .tl button.done { border-color: rgba(255,255,255,.5); }
 .tl__g { font-family: var(--mono); font-size: .72rem; color: var(--mute-d); text-transform: uppercase; white-space: nowrap; }
-.tl__pair { font-weight: 900; font-stretch: 66%; font-size: clamp(1.3rem, 2.6vw, 2.1rem); line-height: 1; }
+.tl__pair { display: flex; gap: 4px; font-weight: 900; font-stretch: 75%; font-size: clamp(.95rem, 1.6vw, 1.2rem); line-height: 1; }
+.tl__pair span { display: grid; place-items: center; width: 1.9em; height: 1.9em; border-radius: 50%; color: var(--white); box-shadow: 0 0 0 1.5px var(--paper); }
+.tl__pair .cA { background: var(--pA); } .tl__pair .cB { background: var(--pB); } .tl__pair .cC { background: var(--pC); }
 .tl__rl { font-family: var(--mono); font-size: .7rem; color: var(--mute-d); white-space: nowrap; }
 .tl__srv { font-family: var(--mono); font-size: .7rem; color: var(--ball); white-space: nowrap; min-height: 1em; }
 
